@@ -1,0 +1,120 @@
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgba(28, 122, 28, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1s;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    font-style: sans-serif;
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    border: white solid;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.split.left .btn:hover{
+    background-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+
+.split.right .btn:hover{
+    background-color: rgba(0, 0, 0, 0.06) ;
+    border-color:  rgba(0, 0, 0, 0.06);
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: darkgray;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background-image: url(1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .split.left::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(87, 84, 236, 0.7) ;
+} */
+
+.split.right{
+    right: 0;
+    background-image: url(2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 
+.split.right::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(43, 43, 43, 0.8) ;
+} */
+
+.split.left,.split.right,.split.left::before,.split.right::before{
+    transition: all 1s ease-in-out;
+}
+
+.hover-left .left{
+    width: 75%;
+}
+
+
+.hover-left .right{
+    width: 25%;
+}
+
+.hover-right .right{
+    width: 75%;
+}
+
+.hover-right .left{
+    width: 25%;
+}
